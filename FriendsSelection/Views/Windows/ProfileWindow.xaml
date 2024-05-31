@@ -1,0 +1,65 @@
+﻿<Window x:Class="FriendsSelection.Views.Windows.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FriendsSelection.Views.Windows"
+        mc:Ignorable="d"
+        Title="Окно профиля" Height="500" Width="800"
+        Background="#FF93B0BB"
+        WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height=".5*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Личный кабинет" FontSize="40" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+        <Grid Name="UserGrid" Grid.Row="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <TextBlock>
+                <Hyperlink Name="RequestsHL" Click="RequestsHL_Click">
+                    <TextBlock Text="{Binding RequestsCount, StringFormat={}Входящие заявки: {0}}"/>
+                </Hyperlink>
+            </TextBlock>
+            
+            <TextBlock Grid.Row="2">
+                <Hyperlink Name="IncomeRequestsHL" Click="IncomeRequestsHL_Click">
+                    <TextBlock Text="{Binding OutcomeRequestCount, StringFormat={}Исходящие заявки: {0}}"/>
+                </Hyperlink>
+            </TextBlock>
+            
+            <TextBlock Grid.Row="4">
+                <Hyperlink>
+                    <TextBlock Name="PlayersCountTbl"/>
+                </Hyperlink>
+            </TextBlock>
+            
+            <TextBlock Grid.Row="6">
+                <Hyperlink Name="FindSuggestHL" Click="FindSuggestHL_Click">
+                    Найти игроков
+                </Hyperlink>
+            </TextBlock>
+            
+            <TextBlock Grid.Row="8">
+                <Hyperlink Name="TournamentHL" Click="TournamentHL_Click">
+                    Турниры
+                </Hyperlink>
+            </TextBlock>
+            
+
+        </Grid>
+         <Button Name="BackBtn" Content="Назад" Click="BackBtn_Click" Grid.Row="2" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+    </Grid>
+</Window>

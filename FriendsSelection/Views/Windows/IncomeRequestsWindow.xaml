@@ -1,0 +1,41 @@
+﻿<Window x:Class="FriendsSelection.Views.Windows.IncomeRequestsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FriendsSelection.Views.Windows"
+        mc:Ignorable="d"
+        Title="IncomeRequestsWindow" Height="450" Width="800"
+        Background="#FF93B0BB"
+        WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height=".3*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Входящие заявки" FontSize="40" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+        <ListView Name="RequestsLV" SelectionChanged="RequestsLV_SelectionChanged" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                        <RowDefinition Height="1*" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="{Binding User.Name}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+    </Grid>
+</Window>

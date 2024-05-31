@@ -1,0 +1,50 @@
+﻿<Window x:Class="FriendsSelection.Views.Windows.FAQWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FriendsSelection.Views.Windows"
+        mc:Ignorable="d"
+        Title="Часто задаваемые вопросы" Height="450" Width="800"
+        Background="#FF93B0BB"
+        WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height=".3*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Часто задаваемые вопросы" FontSize="40" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+        <ScrollViewer Grid.Row="1">
+            <Grid Margin="20" Grid.Row="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Где появляется публикация после прохождения модерации?" Grid.Row="1" TextWrapping="Wrap"/>
+            <TextBlock Text="Сущесвтует ли обратная связь модераторов с автормаи публикаций?" Grid.Row="3" TextWrapping="Wrap"/>
+            <TextBlock Text="Как правильно оформить заявку?" Grid.Row="5" TextWrapping="Wrap"/>
+            <TextBlock Text="Как подать заявку на участие в турнире?" Grid.Row="7" TextWrapping="Wrap"/>
+            <TextBlock Text="Есть ли правила оформления руководств?" Grid.Row="9" TextWrapping="Wrap"/>
+            <TextBlock Text="Сколько времени ищется союзник?" Grid.Row="11" TextWrapping="Wrap"/>
+        </Grid>
+        </ScrollViewer>
+        <Button Name="BackBtn" Content="Назад" Click="BackBtn_Click" Grid.Row="2" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+    </Grid>
+</Window>
